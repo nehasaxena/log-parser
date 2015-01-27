@@ -1,0 +1,109 @@
+<PhotoGallery>
+    <heading>Bruce Forsyth</heading>
+    <images>
+        <image>
+            <thumbnail>
+                <src>http://www.radiotimes.com/content/features/galleries/bruce-forsyth/01/thumbImage.jpg</src>
+                <alt>Bruce Forsyth on the cover of Radio Times in 1965</alt>
+                <text>1965</text>
+            </thumbnail>
+            <mainImage>
+                <src>http://www.radiotimes.com/content/features/galleries/bruce-forsyth/01/mainImage.jpg</src>
+                <alt>Bruce Forsyth on the cover of Radio Times in 1965</alt>
+                <text1>To today's audiences, he's the personification of Strictly Come Dancing. But to earlier ones he's
+                    Play Your Cards Right or Sunday Night at the London Palladium - and, for millions, he's forever
+                    linked to The Generation Game.
+
+                    Trace Bruce Forsyth's amazing career through photos and Radio Times covers from the 1960s to today.
+                </text1>
+                <text2>Brucie earns his first-ever Radio Times cover in time for his 1965 Christmas special. (Image ©
+                    Radio Times)
+                </text2>
+            </mainImage>
+        </image>
+        <image>
+            <thumbnail>
+                <src>http://www.radiotimes.com/content/features/galleries/bruce-forsyth/02/thumbImage.jpg</src>
+                <alt>Bruce Forsyth on the cover of Radio Times in 1972 for The Generation Game</alt>
+                <text>1972</text>
+            </thumbnail>
+            <mainImage>
+                <src>http://www.radiotimes.com/images/spacer.gif</src>
+                <alt></alt>
+                <text1>Back on Radio Times in 1972 for The Generation Game.
+                    (Image © Radio Times)
+                </text1>
+            </mainImage>
+        </image>
+        <image>
+            <thumbnail>
+                <src>http://www.radiotimes.com/content/features/galleries/bruce-forsyth/03/thumbImage.jpg</src>
+                <alt>Bruce Forsyth and Anthea Redfern on the cover of Radio Times in 1976 for The Generation Game</alt>
+                <text>1976</text>
+            </thumbnail>
+            <mainImage>
+                <src>http://www.radiotimes.com/images/spacer.gif</src>
+                <alt></alt>
+                <text1>Back for more of The Generation Game but with co-host and then wife Anthea Redfern. (Image ©
+                    Radio Times)
+                </text1>
+            </mainImage>
+        </image>
+        <image>
+            <thumbnail>
+                <src>http://www.radiotimes.com/content/features/galleries/bruce-forsyth/04/thumbImage.jpg</src>
+                <alt>Bruce Forsyth on the cover of Radio Times in 1991</alt>
+                <text>1991</text>
+            </thumbnail>
+            <mainImage>
+                <src>http://www.radiotimes.com/images/spacer.gif</src>
+                <alt></alt>
+                <text1>Bruce Forsyth was back on the cover of Radio Times for an Easter special in 1991. (Image © Radio
+                    Times)
+                </text1>
+            </mainImage>
+        </image>
+        <image>
+            <thumbnail>
+                <src>http://www.radiotimes.com/content/features/galleries/bruce-forsyth/05/thumbImage.jpg</src>
+                <alt>Bruce Forsyth with Strictly Come Dancing colleagues Natasha Kaplinsky and Tess Daly</alt>
+                <text>2004</text>
+            </thumbnail>
+            <mainImage>
+                <src>http://www.radiotimes.com/images/spacer.gif</src>
+                <alt></alt>
+                <text1>Can you believe that Strictly Come Dancing began in 2004? Here's Bruce Forsyth with co-host Tess
+                    Daly on the right and winner Natasha Kaplinsky on the left. (Image © Radio Times)
+                </text1>
+            </mainImage>
+        </image>
+        <image>
+            <thumbnail>
+                <src>http://www.radiotimes.com/content/features/galleries/bruce-forsyth/06/thumbImage.jpg</src>
+                <alt>Bruce Forsyth and Tess Daly</alt>
+                <text>2006</text>
+            </thumbnail>
+            <mainImage>
+                <src>http://www.radiotimes.com/images/spacer.gif</src>
+                <alt></alt>
+                <text1>Strictly Come Dancing was an immediate hit but by 2006 it was giant. Bruce Forsyth with Tess
+                    Daly. (Image © Radio Times)
+                </text1>
+            </mainImage>
+        </image>
+        <image>
+            <thumbnail>
+                <src>http://www.radiotimes.com/content/features/galleries/bruce-forsyth/07/thumbImage.jpg</src>
+                <alt>Bruce Forsyth dusts a bust of himself for Radio Times in 2010</alt>
+                <text>2010</text>
+            </thumbnail>
+            <mainImage>
+                <src>http://www.radiotimes.com/images/spacer.gif</src>
+                <alt></alt>
+                <text1>It's a bust. Bruce Forsyth poses at home for Radio Times in 2010.
+                    (Image © Radio Times)
+                </text1>
+            </mainImage>
+        </image>
+    </images>
+</PhotoGallery>

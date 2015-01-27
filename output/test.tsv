@@ -1,0 +1,2 @@
+IP Address	RFC 1413 identity	Remote User	DateTime	HTTP Method	Requested Resource	Client Protocol	HTTP Status Code	Response Size	Referer	User Agent	
+null	-	-	010101	GET	/recipes/1223/images/1223_SMALL.jpg	test	200	6144	wwww.google.com	Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10	

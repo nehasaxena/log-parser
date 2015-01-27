@@ -1,0 +1,4 @@
+logparser.jar License
+======================
+
+This is a free software. Version 1.0
