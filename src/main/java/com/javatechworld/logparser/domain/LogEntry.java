@@ -1,5 +1,7 @@
 package com.javatechworld.logparser.domain;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Title:       Log Parser
  * Copyright:   Copyright (c) 2011
@@ -12,17 +14,27 @@ package com.javatechworld.logparser.domain;
  */
 
 public class LogEntry {
-
+    @SerializedName("IP Address")
     private String ipAddress;
+    @SerializedName("RFC 1413 identity")
     private String identd;
+    @SerializedName("Remote User")
     private String remoteUser;
+    @SerializedName("DateTime")
     private String dateTime;
+    @SerializedName("HTTP Method")
     private String httpMethod;
+    @SerializedName("Requested Resource")
     private String requestedResource;
+    @SerializedName("Client Protocol")
     private String clientProtocol;
+    @SerializedName("HTTP Status Code")
     private String httpStatusCode;
+    @SerializedName("Response Size")
     private String responseSize;
+    @SerializedName("Referer")
     private String referer;
+    @SerializedName("User Agent")
     private String userAgent;
 
 

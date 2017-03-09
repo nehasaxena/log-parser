@@ -1,13 +1,20 @@
 package com.javatechworld.logparser.service;
 
 
-import com.javatechworld.logparser.domain.LogEntry;
-import com.javatechworld.logparser.exception.LogParserException;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.any;
+import static org.mockito.Mockito.anyString;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 import java.net.URL;
+
+import com.javatechworld.logparser.domain.LogEntry;
+import com.javatechworld.logparser.exception.LogParserException;
+import com.javatechworld.logparser.service.writers.TSVFileWriterService;
 
 /**
  * Title:       Log Parser
@@ -23,14 +30,14 @@ import java.net.URL;
 public class LogParserServiceTest {
 
     private LogParserService service = new LogParserService();
-    private FileWriterService fileWriterService = mock(FileWriterService.class);
+    private com.javatechworld.logparser.service.writers.TSVFileWriterService TSVFileWriterService = mock(TSVFileWriterService.class);
     private LogParserParser parser = mock(LogParserParser.class);
 
 
     @org.junit.Before
     public void setup(){
         service.setParser(parser);
-        service.setWriterService(fileWriterService);
+        service.setTsvFileWriterService(TSVFileWriterService);
     }
 
     @org.junit.Test
@@ -64,7 +71,7 @@ public class LogParserServiceTest {
         when(parser.parse(anyString())).thenReturn(new LogEntry());
         service.parseFile(filePath.getPath(), "outputFile.txt");
         verify(parser,times(4)).parse(anyString());
-        verify(fileWriterService, times(4)).writeToFile(any(LogEntry.class));
+        verify(TSVFileWriterService, times(4)).writeToFile(any(LogEntry.class));
     }
 
 }

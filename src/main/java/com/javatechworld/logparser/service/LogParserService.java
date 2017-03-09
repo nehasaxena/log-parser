@@ -1,11 +1,17 @@
 package com.javatechworld.logparser.service;
 
-import com.javatechworld.logparser.domain.LogEntry;
-import com.javatechworld.logparser.exception.LogParserException;
-
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.javatechworld.logparser.domain.LogEntry;
+import com.javatechworld.logparser.exception.LogParserException;
+import com.javatechworld.logparser.service.writers.JSONFileWriterService;
+import com.javatechworld.logparser.service.writers.TSVFileWriterService;
 
 /**
  * Title:       Log Parser
@@ -22,7 +28,8 @@ public class LogParserService {
 
     private LogParserParser parser;
     private List<LogEntry> logEntries = new ArrayList<LogEntry>();
-    private FileWriterService writerService = new FileWriterService();
+    private TSVFileWriterService tsvService = new TSVFileWriterService();
+    private JSONFileWriterService jsonService = new JSONFileWriterService();
 
     public LogParserService() {
         this.parser = new LogParserParser();
@@ -42,13 +49,20 @@ public class LogParserService {
             in = new InputStreamReader(fileInputStream);
             reader = new BufferedReader(in);
 
-            writerService.openWriter(outputFileName);
+            tsvService.openWriter(outputFileName+".tsv");
+            tsvService.prependHeader();
+            jsonService.openWriter(outputFileName+".json");
+            jsonService.prependHeader();
 
             String line = null;
+            LogEntry logEntry = null;
             while ((line = reader.readLine()) != null) {
-                writerService.writeToFile(parser.parse(line));
+                logEntry = parser.parse(line);
+                tsvService.writeToFile(logEntry);
+                jsonService.writeToFile(logEntry);
             }
 
+            jsonService.appendClosingCharacters();
 
         } catch (FileNotFoundException e) {
             throw new LogParserException("Not able to locate file. Please check the file location entered:" + fileLocation+ "\n"+e.getMessage(), e);
@@ -70,7 +84,7 @@ public class LogParserService {
             } catch (IOException e) {
                 //Do Nothing
             }finally {
-                writerService.closeWriter();
+                tsvService.closeWriter();
             }
         }
 
@@ -81,7 +95,7 @@ public class LogParserService {
         this.parser = parser;
     }
 
-    public void setWriterService(FileWriterService writerService) {
-        this.writerService = writerService;
+    public void setTsvFileWriterService(TSVFileWriterService tsvFileWriterService) {
+        this.tsvService = tsvFileWriterService;
     }
 }

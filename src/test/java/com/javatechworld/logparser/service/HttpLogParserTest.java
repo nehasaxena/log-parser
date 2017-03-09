@@ -1,10 +1,13 @@
 package com.javatechworld.logparser.service;
 
-import com.javatechworld.logparser.Helper;
-import com.javatechworld.logparser.exception.LogParserException;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.anyString;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+
+import com.javatechworld.logparser.Helper;
+import com.javatechworld.logparser.exception.LogParserException;
 
 /**
  * Title:       Log Parser
@@ -21,11 +24,9 @@ public class HttpLogParserTest {
 
     private HttpLogParser httpLogParser = new HttpLogParser();
     private LogParserService logParserService = mock(LogParserService.class);
-    private FileWriterService fileWriterService = mock(FileWriterService.class);
 
     @org.junit.Before
     public void setup() {
-        httpLogParser.setFileWriterService(fileWriterService);
         httpLogParser.setLogParserService(logParserService);
     }
 
@@ -51,7 +52,7 @@ public class HttpLogParserTest {
     @org.junit.Test
     public void testCreateCSVFromLog() throws Exception {
 
-        Helper.invokeMethod(httpLogParser, "createCSVFromLog", new Class[]{String.class}, new Object[]{"test"});
+        Helper.invokeMethod(httpLogParser, "createOutputFileFromLog", new Class[]{String.class}, new Object[]{"test"});
         verify(logParserService).parseFile(anyString(), anyString());
     }
 

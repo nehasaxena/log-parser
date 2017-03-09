@@ -1,1 +1,1 @@
-IP Address	RFC 1413 identity	Remote User	DateTime	HTTP Method	Requested Resource	Client Protocol	HTTP Status Code	Response Size	Referer	User Agent	
+IP Address	RFC 1413 identity	Remote User	DateTime	HTTP Method	Requested Resource	Client Protocol	HTTP Status Code	Response Size	Referer	User Agent
